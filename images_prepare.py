@@ -16,7 +16,7 @@ def convert_one_channel(img):
     
 def pre_images(resize_shape,path,include_zip):
     if include_zip==True:
-        ZipFile(path+"/DentalPanoramicXrays.zip").extractall(path) 
+        ZipFile(path+"/xray.zip").extractall(path) 
         path=path+'/Images/'
     dirs=natsorted(os.listdir(path))
     sizes=np.zeros([len(dirs),2])
